@@ -1,6 +1,6 @@
 const express=require('express');
 const app=express();
-// const {db}=require('./src/config/db');
+
 const route= require('./src/routes/index.js')
 const bodyParser=require('body-parser')
 const multer = require("multer");
@@ -8,7 +8,7 @@ const upload = multer()
 const {engine}=require('express-handlebars');
 const path=require('path')
 const cookieParser = require('cookie-parser');
-const loginController= require('./src/app/controllers/LoginController')
+
 app.use(cookieParser());
 app.engine('hbs', engine({
   extname:".hbs",

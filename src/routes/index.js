@@ -1,6 +1,5 @@
 const menuController=require('../app/controllers/MenuController')
 const createController= require('../app/controllers/CreateController')
-const searchController= require('../app/controllers/SearchController')
 const siteController= require('../app/controllers/SiteController')
 const loginController= require('../app/controllers/LoginController')
 const jwt=require('jsonwebtoken')
