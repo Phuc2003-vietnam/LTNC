@@ -1,4 +1,3 @@
-const { accessSync } = require("fs");
 const connection = require("../../config/db/customerAcc");
 class MenuController{
     //POST search/menu

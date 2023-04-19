@@ -12,7 +12,6 @@ class CreateController {
   }
   
   account(req, res) {
-    console.log(req.body);
     var level =req.body.level;
     var customer= new BankAccount();
     if (level=='silver')
@@ -56,14 +55,12 @@ class CreateController {
                         .setBonusInterestRate(req.body.bonus)
                         .Builder();
     }
-    console.log(customer.bdate);
-    console.log('i am here');
+    console.log('i  here');
     async function createAcc(){
           await  connection.query(`INSERT INTO acc VALUES ('${customer.accountNumber}', '${customer.owner}','${customer.password}',
           STR_TO_DATE('${customer.birthday}','%Y-%m-%d'),'${customer.address}','${customer.phonenumber}','${customer.balance}','${customer.interestRate}','${customer.AccountLevel}',
           '${customer.BonusInterestRate}') `)
               .then(()=>{
-                setTimeout(()=>{res.redirect('/')},5000)
                 res.json('Your account has been created sucessfully')
               })
               .catch((err)=>{res.send(err)})
