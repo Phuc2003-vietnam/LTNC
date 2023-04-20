@@ -13,9 +13,8 @@ function route(app)
             app.post('/login',loginController.checkAndSendToken)
             app.use(loginController.checkToken)
 
-
-            app.post('/account',createController.account)
             app.get('/create/account',createController.showCreateAccount)
+            app.post('/account',createController.account)
 
 
             app.post('/search/menu',menuController.index)

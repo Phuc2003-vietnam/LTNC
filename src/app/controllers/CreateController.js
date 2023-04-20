@@ -61,9 +61,12 @@ class CreateController {
           STR_TO_DATE('${customer.birthday}','%Y-%m-%d'),'${customer.address}','${customer.phonenumber}','${customer.balance}','${customer.interestRate}','${customer.AccountLevel}',
           '${customer.BonusInterestRate}') `)
               .then(()=>{
-                res.json('Your account has been created sucessfully')
+                res.sendFile(path.join(__dirname,'../../../createSuccess.html'))
               })
-              .catch((err)=>{res.send(err)})
+              .catch((err)=>{
+                // res.send(err)
+                res.sendFile(path.join(__dirname,'../../../createFailed.html'))
+              })
 
   }
   createAcc()

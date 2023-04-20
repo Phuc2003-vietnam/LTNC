@@ -21,10 +21,11 @@ class LoginController{
             {
                var token=  jwt.sign({user:req.body.username},'mk')
                res.cookie('token', token);
-               res.redirect('/')
+               res.sendFile(path.join(__dirname,'../../../successLogin.html'))
             }
             else{
-                res.json('Login failed => username or password undefined');
+                res.sendFile(path.join(__dirname,'../../../failLogin.html'))
+
             }
         }
         check()
