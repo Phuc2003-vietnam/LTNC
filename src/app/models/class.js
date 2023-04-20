@@ -96,11 +96,7 @@
       this.BonusInterestRate = 0;
     }
   
-    setBonusInterestRate(BonusInterestRate) {
-      this.BonusInterestRate = BonusInterestRate;
-      return this;
-    }
-  
+
     setAccountNumber(accountNumber) {
       this.accountNumber = accountNumber;
       return this;
@@ -117,6 +113,7 @@
     }
   
     setBirthday(birthday) {
+      if(birthday=='') birthday = '1000-10-10';
       this.birthday = birthday;
       return this;
     }
@@ -125,18 +122,36 @@
       return this;
     }
     setPhoneNumber(phonenumber) {
+      
       this.phonenumber = phonenumber;
       return this;
     }
     setBalance(balance) {
+      if(balance=='')
+      {
+        balance=0;
+      }
       this.balance = balance;
       return this;
     }
   
     setInterestRate(interestRate) {
+      if(interestRate=='')
+      {
+        interestRate=0;
+      }
       this.interestRate = interestRate;
       return this;
     }
+    setBonusInterestRate(BonusInterestRate) {
+      if(BonusInterestRate=='')
+      {
+        BonusInterestRate=0;
+      }
+      this.BonusInterestRate = BonusInterestRate;
+      return this;
+    }
+  
   
     Builder() {
       return new BankAccount(
@@ -168,10 +183,7 @@
       this.BonusInterestRate = 0;
     }
   
-    setBonusInterestRate(BonusInterestRate) {
-      this.BonusInterestRate = BonusInterestRate;
-      return this;
-    }
+
   
     setAccountNumber(accountNumber) {
       this.accountNumber = accountNumber;
@@ -189,6 +201,7 @@
     }
   
     setBirthday(birthday) {
+      if(birthday=='') birthday = '1000-10-10';
       this.birthday = birthday;
       return this;
     }
@@ -201,12 +214,28 @@
       return this;
     }
     setBalance(balance) {
+      if(balance=='')
+      {
+        balance=0;
+      }
       this.balance = balance;
       return this;
     }
   
     setInterestRate(interestRate) {
+      if(interestRate=='')
+      {
+        interestRate=0;
+      }
       this.interestRate = interestRate;
+      return this;
+    }
+    setBonusInterestRate(BonusInterestRate) {
+      if(BonusInterestRate=='')
+      {
+        BonusInterestRate=0;
+      }
+      this.BonusInterestRate = BonusInterestRate;
       return this;
     }
   
@@ -240,10 +269,7 @@
       this.BonusInterestRate = 0;
     }
   
-    setBonusInterestRate(BonusInterestRate) {
-      this.BonusInterestRate = BonusInterestRate;
-      return this;
-    }
+
   
     setAccountNumber(accountNumber) {
       this.accountNumber = accountNumber;
@@ -261,6 +287,7 @@
     }
   
     setBirthday(birthday) {
+      if(birthday=='') birthday = '1000-10-10';
       this.birthday = birthday;
       return this;
     }
@@ -273,12 +300,28 @@
       return this;
     }
     setBalance(balance) {
+      if(balance=='')
+      {
+        balance=0;
+      }
       this.balance = balance;
       return this;
     }
   
     setInterestRate(interestRate) {
+      if(interestRate=='')
+      {
+        interestRate=0;
+      }
       this.interestRate = interestRate;
+      return this;
+    }
+    setBonusInterestRate(BonusInterestRate) {
+      if(BonusInterestRate=='')
+      {
+        BonusInterestRate=0;
+      }
+      this.BonusInterestRate = BonusInterestRate;
       return this;
     }
   
