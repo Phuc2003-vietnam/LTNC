@@ -38,7 +38,8 @@ class LoginController{
             next();
         }
         catch(err){
-            return res.json('Authentication fail -> Login is required')
+            res.sendFile(path.join(__dirname,'../../../authenticationFail.html'))
+
         }
     }
 }
