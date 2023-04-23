@@ -2,6 +2,8 @@ const { DEFAULT_ENCODING } = require('crypto');
 const jwt = require('jsonwebtoken');
 const path=require('path')
 const accConnection = require("../../config/db/account.js");
+require("dotenv").config();
+
 class LoginController{
     render(req,res)
     {
@@ -33,7 +35,7 @@ class LoginController{
     checkToken(req,res,next)  {
         try{
             console.log('kiem tra');
-            var ketqua=jwt.verify(req.cookies.token,'mk')
+            var ketqua=jwt.verify(req.cookies.token,process.env.SECRET)
             console.log('finish');
             next();
         }
